@@ -10,16 +10,17 @@ const config: Config = {
     extend: {
       fontFamily: { Inter: ["Inter", "sans-serif"] },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "instagram-gradient":
+          "linear-gradient(to right [hsl(37,97%,70%)], [hsl(329,70%,58%))]",
+        "dark-theme-toggle":
+          "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))",
       },
       colors: {
         LimeGreen: "hsl(163, 72%, 41%)",
         BrightRed: "hsl(356, 69%, 56%)",
         Facebook: "hsl(208, 92%, 53%)",
         Twitter: "hsl(203, 89%, 53%)",
-        Instagram: "linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)",
+        Instagram: "linear gradient [hsl(37,97%,70%)] to [hsl(329,70%,58%)]",
         YouTube: "hsl(348, 97%, 39%)",
         ToggleDark: "linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)",
         ToggleLight: "hsl(230, 22%, 74%)",
