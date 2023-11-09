@@ -59,16 +59,16 @@ export default function SocialMediaCard({ }: Props) {
             {socialMediaData.map((item, index) => (
 
                 <div className={`${item.borderColor} text-sm h-[180px] rounded-md  flex flex-col justify-end w-48 `}>
-                    <div className="flex flex-col  bg-blue-950 w-full h-44 justify-between items-center p-4 rounded-md">
+                    <div className="flex flex-col  bg-DarkDesaturatedBlueCardBG w-full h-44 justify-between items-center p-4 rounded-md">
                         <div className="flex gap-2 items-center">
                             <Image src={item.socialIcon} width={16} alt={''} />
-                            <p className="text-white/40 text-xs font-semibold">{item.idName}</p>
+                            <p className=" text-DesaturatedBlueText font-semibold text-sm">{item.idName}</p>
                         </div>
                         <div className="flex flex-col items-center gap-1 ">
                             <h3 className='text-4xl font-bold'>{item.followers}</h3>
-                            <p className=" tracking-wider text-xs w-full text-white/40 text-center">FOLLOWERS</p>
+                            <p className=" tracking-wider text-xs w-full text-DesaturatedBlueText text-center">FOLLOWERS</p>
                         </div>
-                        <div className="flex gap-2 items-center">
+                        <div className="flex gap-2 items-center font-semibold">
                             <Image src={item.statusIcon} alt={''} width={10} height={10} />
                             <p className={`${item.statusColor}`}>{item.statusCount} Today</p>
                         </div>
