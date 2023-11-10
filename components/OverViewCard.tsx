@@ -81,17 +81,18 @@ type Props = {}
 export default function OverViewCard({ }: Props) {
     return (
         <div className='flex flex-col gap-4'>
-            <h3>OverView - Today</h3>
+            <h3 className='text-2xl font-bold dark:text-white text-DarkGrayishBlueText'>OverView - Today</h3>
             <div className="sm:grid-cols-4  sm:grid-rows-1 grid grid-cols-1 grid-rows-4 
-        bg-yellow-300 w-full  h-auto place-items-center gap-4">
+         w-full  h-auto place-items-center gap-4  py-5 ">
                 {OverviewData.map((item, index) => (
-                    <div className="flex flex-col bg-DarkDesaturatedBlueCardBG text-black justify-between p-4 rounded-md gap-12 h-40 w-52">
-                        <div className='flex justify-between p-2'>
+                    <div className="flex flex-col dark:bg-DarkDesaturatedBlueCardBG bg-LightGrayishBlueCardBG text-black justify-center p-4 rounded-md gap-6 h-32
+                      w-full  ">
+                        <div className='flex justify-between p-2 items-center'>
                             <p className="text-sm text-DesaturatedBlueText font-semibold">{item.Name}</p>
                             <Image src={item.socialIcon} alt={''} />
                         </div>
                         <div className="flex justify-between">
-                            <p className="font-bold text-3xl text-white">{item.normalCounrt}</p>
+                            <p className="font-bold text-3xl md:text-xl dark:text-white text-black">{item.normalCounrt}</p>
                             <div className={`flex items-center font-semibold ${item.statusColor}`}>
                                 <Image src={item.statusIcon} alt={''} />
                                 <p className="">{item.progressPercentage}%</p>

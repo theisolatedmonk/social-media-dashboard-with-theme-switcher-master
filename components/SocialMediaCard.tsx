@@ -19,7 +19,8 @@ const socialMediaData = [
         followers: '1987',
         statusIcon: iconUp,
         statusCount: 12,
-        statusColor: 'text-LimeGreen'
+        statusColor: 'text-LimeGreen',
+        membershipType: 'FOLLOWERS'
 
     },
     {
@@ -29,7 +30,8 @@ const socialMediaData = [
         followers: '1044',
         statusIcon: iconUp,
         statusCount: 99,
-        statusColor: 'text-LimeGreen'
+        statusColor: 'text-LimeGreen',
+        membershipType: 'FOLLOWERS'
     },
     {
         borderColor: 'bg-gradient-to-r from-[hsl(37,97%,70%)] to-[hsl(329,70%,58%)]',
@@ -38,7 +40,8 @@ const socialMediaData = [
         followers: '11k',
         statusIcon: iconUp,
         statusCount: 1099,
-        statusColor: 'text-LimeGreen'
+        statusColor: 'text-LimeGreen',
+        membershipType: 'FOLLOWERS'
     },
     {
         borderColor: 'bg-YouTube',
@@ -47,7 +50,8 @@ const socialMediaData = [
         followers: '8239',
         statusIcon: iconDown,
         statusCount: 144,
-        statusColor: 'text-BrightRed'
+        statusColor: 'text-BrightRed',
+        membershipType: 'SUBSCRIBERS'
     },
 ]
 
@@ -55,18 +59,18 @@ const socialMediaData = [
 export default function SocialMediaCard({ }: Props) {
     return (
         <div className="sm:grid-cols-4  sm:grid-rows-1 grid grid-cols-1 grid-rows-4 
-        bg-yellow-300 w-full  h-auto place-items-center gap-4">
+       w-full  h-auto place-items-center gap-4 ">
             {socialMediaData.map((item, index) => (
 
-                <div className={`${item.borderColor} text-sm h-[180px] rounded-md  flex flex-col justify-end w-48 `}>
-                    <div className="flex flex-col  bg-DarkDesaturatedBlueCardBG w-full h-44 justify-between items-center p-4 rounded-md">
-                        <div className="flex gap-2 items-center">
+                <div className={`${item.borderColor} text-sm h-[180px]  rounded-md  flex flex-col justify-end  w-full `}>
+                    <div className="flex flex-col  dark:bg-DarkDesaturatedBlueCardBG bg-LightGrayishBlueCardBG w-full h-[170px] justify-between items-center p-4 rounded-md">
+                        <div className="flex gap-2 items-center ">
                             <Image src={item.socialIcon} width={16} alt={''} />
-                            <p className=" text-DesaturatedBlueText font-semibold text-sm">{item.idName}</p>
+                            <p className=" text-DesaturatedBlueText font-semibold text-sm  ">{item.idName}</p>
                         </div>
                         <div className="flex flex-col items-center gap-1 ">
-                            <h3 className='text-4xl font-bold'>{item.followers}</h3>
-                            <p className=" tracking-wider text-xs w-full text-DesaturatedBlueText text-center">FOLLOWERS</p>
+                            <h3 className='text-4xl md:text-3xl font-bold dark:text-white text-black'>{item.followers}</h3>
+                            <p className=" tracking-wider text-xs w-full text-DesaturatedBlueText text-center">{item.membershipType}</p>
                         </div>
                         <div className="flex gap-2 items-center font-semibold">
                             <Image src={item.statusIcon} alt={''} width={10} height={10} />

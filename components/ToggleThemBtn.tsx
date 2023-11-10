@@ -8,6 +8,7 @@ export default function ToggleThemBtn({ }: Props) {
 
     const { resolvedTheme, setTheme } = useTheme()
     const theme = resolvedTheme
+
     function toggleTheme() {
         if (theme == 'dark') setTheme('light');
         if (theme == 'light') setTheme('dark')
